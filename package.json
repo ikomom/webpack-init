@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^6.5.1",
     "posthtml": "^0.16.5",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1"
