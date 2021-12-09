@@ -1,0 +1,1 @@
+console.log("\n  <component>\n    <title>Super Title</title>\n    <text>Awesome Text</text>\n  </component>\n");
