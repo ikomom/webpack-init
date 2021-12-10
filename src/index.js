@@ -1,4 +1,5 @@
-// import posthtml from "posthtml";
+import a from './index.css'
+import b, {page} from "./Page";
 
 const html = `
   <component>
@@ -6,9 +7,7 @@ const html = `
     <text>Awesome Text</text>
   </component>
 `;
-//
-// const result = posthtml()
-//     .use(require("posthtml-custom-elements")())
-//     .process(html, { sync: true }).html;
 
 console.log(html);
+console.log(a);
+console.log(page, b);
