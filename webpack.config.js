@@ -18,8 +18,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/i, //匹配所有的 css 文件
-        exclude: /\.lazy\.css$/i,
+        test: /\.css$/i,
+        exclude: [/\.lazy\.css$/i, /\.link\.css$/i],
         use: [
           {
             loader: 'style-loader',
@@ -43,6 +43,27 @@ module.exports = {
           }
         ]
       },
+      {
+        test: /\.link\.css$/i,
+        use: [
+          { loader: "style-loader", options: { injectType: "linkTag" } },
+          { loader: "file-loader",  options: {
+              name: "css/[name].[hash:6].css",
+              publicPath: "dist1/" // depends on your project architecture
+            } },
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: "image/[name].[hash:6].[ext][query]",
+            }
+          }
+        ]
+      }
     ]
   }
 }

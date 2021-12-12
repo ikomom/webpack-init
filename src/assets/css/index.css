@@ -1,0 +1,23 @@
+@value v-primary: blue;
+
+body {
+  border: 2px solid v-primary;
+  padding: 10px;
+}
+
+:global(.className) {
+  background: red;
+}
+
+:local .className {
+  color: green;
+  composes: button from "button.css";
+}
+
+:local(.className .subClass) {
+  color: green;
+}
+
+:local .className .subClass :global(.global-class-name) {
+  color: blue;
+}

@@ -1,0 +1,7 @@
+body {
+  background-color: yellow
+}
+
+:local .className {
+  color: rebeccapurple;
+}
