@@ -5,6 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "dev": "webpack --mode=development",
+    "dev:config": "webpack --mode=development --config webpack.dev.js",
     "build": "webpack  --mode=production"
   },
   "author": "",
@@ -12,13 +13,16 @@
   "devDependencies": {
     "css-loader": "^6.5.1",
     "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.5",
     "posthtml": "^0.16.5",
     "style-loader": "^3.3.1",
     "webpack": "^5.65.0",
-    "webpack-cli": "^4.9.1"
+    "webpack-cli": "^4.9.1",
+    "webpack-subresource-integrity": "^5.0.0"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "posthtml-custom-elements": "^1.1.2"
   }
 }

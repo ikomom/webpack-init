@@ -2,6 +2,7 @@
 node_modules
 dist
 build
+multi-page
 
 # local env files
 .env.local
