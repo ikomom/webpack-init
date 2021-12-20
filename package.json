@@ -7,7 +7,8 @@
     "dev": "webpack --mode=development",
     "dev:config": "webpack --config webpack.dev.js --progress",
     "build": "webpack  --mode=production",
-    "analyze": "webpack --analyze --progress --config webpack.dev.js"
+    "analyze": "webpack --analyze --progress --config webpack.dev.js",
+    "svgo": "svgo -f ./src/assets/images -o ./src/assets/images/svg"
   },
   "author": "",
   "license": "ISC",
@@ -17,12 +18,16 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.5",
+    "mini-svg-data-uri": "^1.4.3",
     "posthtml": "^0.16.5",
+    "raw-loader": "^4.0.2",
     "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
     "webpack": "^5.65.0",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.1",
-    "webpack-subresource-integrity": "^5.0.0"
+    "webpack-subresource-integrity": "^5.0.0",
+    "svgo": "^2.8.0"
   },
   "dependencies": {
     "lodash": "^4.17.21",
