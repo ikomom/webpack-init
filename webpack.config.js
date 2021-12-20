@@ -1,4 +1,6 @@
 const path = require('path')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -8,6 +10,14 @@ module.exports = {
     filename: 'bundle.js', //打包后的文件名称
     path: path.resolve(__dirname, './dist') //打包后的目录
   },
+  plugins: [
+      new MiniCssExtractPlugin({
+        filename: 'css/[name].[chunkhash].css'
+      }),
+      new HtmlWebpackPlugin({
+        template: './index.html'
+      })
+  ],
   module: {
     rules: [ // 转换规则
       {
@@ -19,7 +29,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        exclude: [/\.lazy\.css$/i, /\.link\.css$/i],
+        exclude: [/\.lazy\.css$/i, /\.link\.css$/i, /\.extra\.css$/i],
         use: [
           {
             loader: 'style-loader',
@@ -49,7 +59,7 @@ module.exports = {
           { loader: "style-loader", options: { injectType: "linkTag" } },
           { loader: "file-loader",  options: {
               name: "css/[name].[hash:6].css",
-              publicPath: "dist1/" // depends on your project architecture
+              // publicPath: "./" // depends on your project architecture
             } },
         ],
       },
@@ -59,11 +69,15 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: "image/[name].[hash:6].[ext][query]",
+              name: "image/[name].[ext][query]",
             }
           }
         ]
+      },
+      {
+        test: /\.extra\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
-    ]
+    ],
   }
 }
