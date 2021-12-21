@@ -1,6 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ConsoleLogWebpackPlugin = require('./plugin/ConsoleLog')
+const ConsoleLogWebpackPlugin = require('./sWebpack/plugin/ConsoleLog')
 const svgToMiniDataURI = require('mini-svg-data-uri');
 
 const getPages = (names, prefix = './src/pages/') => {
