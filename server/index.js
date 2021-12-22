@@ -22,4 +22,3 @@ hooks.tap('hello', (name) => {
 })
 hooks.call('测试')
 
-

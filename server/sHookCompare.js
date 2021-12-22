@@ -2,7 +2,7 @@
  * https://github.com/webpack/tapable/issues/62
  */
 
-const { SyncHook } = require("./");
+const { SyncHook } = require("tapable");
 class MySyncHook {
   constructor(argNames) {
     this.argNames = argNames;
@@ -163,7 +163,7 @@ function test() {
   const parser1 = { sum2: 0 };
   const parser2 = { sum2: 0 };
 
-  for (let i = 0; i < PLUGINS; i++) {
+  for (let i = 0; i < CALLS; i++) {
     hook1.tap(`plugin${i}a`, function pluginA(compilation) {
       compilation.sum = compilation.sum + i;
     });
@@ -443,4 +443,10 @@ function unrollDeoptTest() {
   setTimeout(test, SPEED);
 }
 
-test();
+module.exports = {
+  test,
+  myTest,
+  otherTest,
+  unrollTest,
+  unrollDeoptTest
+}
