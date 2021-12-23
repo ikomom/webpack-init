@@ -53,4 +53,20 @@ class SyncHook extends Hook {
   }
 }
 
-module.exports = SyncHook
+function test() {
+  const hooks = new SyncHook(['name'])
+
+  hooks.tap('hello', (name) => {
+    console.log(`hello ${name}`)
+  })
+
+  hooks.tap('hello', (name) => {
+    console.log(`hello11 ${name}`)
+  })
+  hooks.call('测试')
+
+
+}
+
+
+module.exports = {SyncHook, test}

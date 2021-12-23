@@ -1,24 +1,48 @@
-// const {SyncHook} = require('tapable');
-// const hook = new SyncHook(['name']);
-// hook.tap('hello', (name) => {
-//   console.log(`hello ${name}`);
-// });
-// hook.tap('hello again', (name) => {
-//   console.log(`hello ${name}, again2`);
-// });
-//
-// hook.call('ahonn');
+/**
+ * https://zhuanlan.zhihu.com/p/79221553
+ */
+const {SyncHook, SyncBailHook, SyncWaterfallHook, SyncLoopHook} = require('tapable');
+const hook = new SyncHook(['name']);
+hook.tap('hello', (name) => {
+  console.log(`hello ${name}`);
+});
+hook.tap('hello again', (name) => {
+  console.log(`hello ${name}, again2`);
+});
 
-const SyncHook = require('./sHook')
+hook.call('ahonn');
 
-const hooks = new SyncHook(['name'])
-
-hooks.tap('hello', (name) => {
-  console.log(`hello ${name}`)
+const hookBail = new SyncBailHook(['hello'])
+hookBail.tap('bailHook', (hello) => {
+  console.log('bailHook', hello)
+  return 1
 })
-
-hooks.tap('hello', (name) => {
-  console.log(`hello11 ${name}`)
+hookBail.tap('bailHook 2', (hello) => {
+  console.log('bailHook 2', hello)
 })
-hooks.call('测试')
+hookBail.call('cccc')
 
+const hookWaterfall = new SyncWaterfallHook(['hello'])
+hookWaterfall.tap('hookWaterfall', (hello) => {
+  console.log('hookWaterfall', hello)
+  return 66
+})
+hookWaterfall.tap('hookWaterfall 2', (hello) => {
+  console.log('hookWaterfall 2', hello)
+})
+hookWaterfall.call('xxxx')
+
+const hookLoop = new SyncLoopHook(['hello'])
+let first = 0
+hookLoop.tap('SyncLoopHook', (hello) => {
+  console.log('SyncLoopHook', hello)
+  if (first > 1) {
+    return undefined
+  }
+  first++
+  return true
+})
+hookLoop.tap('SyncLoopHook 2', (hello) => {
+  console.log('SyncLoopHook 2', hello)
+})
+hookLoop.call('ggg')
