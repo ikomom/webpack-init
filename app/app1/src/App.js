@@ -6,7 +6,7 @@ const App = () => {
     <div>
       <div style={{
         margin:"1px",
-        padding:"10px",
+        padding:"110px",
         textAlign:"center",
         backgroundColor:"greenyellow"
       }}>
