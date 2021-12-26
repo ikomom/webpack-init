@@ -1,0 +1,28 @@
+{
+  "name": "app4",
+  "version": "1.0.0",
+  "author": "ikonon <315793076@qq.com>",
+  "homepage": "https://github.com/ikomom/webpack-init#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikomom/webpack-init.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/ikomom/webpack-init/issues"
+  }
+}

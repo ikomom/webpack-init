@@ -1,9 +1,5 @@
 {
   "version": "independent",
   "npmClient": "yarn",
-  "useWorkspaces": true,
-  "packages": [
-    "app1",
-    "app2"
-  ]
+  "useWorkspaces": true
 }

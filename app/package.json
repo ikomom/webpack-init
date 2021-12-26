@@ -2,19 +2,19 @@
   "name": "module-federation",
   "version": "1.0.0",
   "private": "true",
-  "workspaces": {
-    "packages": [
-      "app1",
-      "app2"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "start": "lerna run --parallel start",
     "build": "lerna run build",
     "bootstrap": "lerna bootstrap",
+    "link": "lerna link",
     "publish": "lerna publish --no-push",
     "init": "lerna init --independent",
-    "verdaccio": "verdaccio"
+    "verdaccio": "verdaccio",
+    "add": "lerna add app1 --scope=app3",
+    "clean": "lerna clean"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
