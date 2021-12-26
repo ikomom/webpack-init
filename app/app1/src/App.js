@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
       <div style={{
-        margin:"10px",
+        margin:"1px",
         padding:"10px",
         textAlign:"center",
         backgroundColor:"greenyellow"
