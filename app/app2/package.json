@@ -1,5 +1,5 @@
 {
-  "name": "app2",
+  "name": "app2-1",
   "version": "1.0.5",
   "main": "index.js",
   "license": "MIT",
@@ -20,5 +20,5 @@
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^4.0.0"
   },
-  "gitHead": "c9d0a866533c77fc4ade8ee596d379cf60b6ce59"
+  "gitHead": "2bcc24843fc4b460686d9152d2f31074c7f990e0"
 }
