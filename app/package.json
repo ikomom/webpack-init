@@ -13,9 +13,11 @@
     "build": "lerna run build",
     "bootstrap": "lerna bootstrap",
     "publish": "lerna publish --no-push",
-    "init": "lerna init --independent"
+    "init": "lerna init --independent",
+    "verdaccio": "verdaccio"
   },
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "verdaccio": "latest"
   }
 }
