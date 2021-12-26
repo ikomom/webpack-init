@@ -11,6 +11,7 @@
   "scripts": {
     "start": "lerna run --parallel start",
     "build": "lerna run build",
+    "publish": "lerna publish",
     "init": "lerna init --independent"
   },
   "devDependencies": {
