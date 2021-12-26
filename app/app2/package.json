@@ -1,6 +1,6 @@
 {
   "name": "app2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -19,5 +19,6 @@
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^4.0.0"
-  }
+  },
+  "gitHead": "c9d0a866533c77fc4ade8ee596d379cf60b6ce59"
 }
