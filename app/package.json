@@ -12,7 +12,7 @@
     "start": "lerna run --parallel start",
     "build": "lerna run build",
     "bootstrap": "lerna bootstrap",
-    "publish": "lerna publish --skip-git",
+    "publish": "lerna publish",
     "init": "lerna init --independent"
   },
   "devDependencies": {
