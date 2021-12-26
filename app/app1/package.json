@@ -1,6 +1,6 @@
 {
   "name": "app1",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
-    "app2": "^1.0.8",
+    "app2": "^1.0.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
