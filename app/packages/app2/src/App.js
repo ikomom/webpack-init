@@ -1,4 +1,5 @@
 import React from "react";
+import {name} from 'app3'
 
 const App = () => {
   return (
@@ -8,7 +9,7 @@ const App = () => {
       textAlign:"center",
       backgroundColor:"cyan"
     }}>
-      <h1 >App 2 222谢谢谢谢</h1>
+      <h1 >App 2 222谢谢谢谢</h1> {name}
     </div>
   )
 }
