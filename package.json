@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "dev": "webpack --mode=development",
-    "dev:config": "webpack --config webpack.dev.js --progress",
+    "dev:config": "webpack --config webpack.dev.js --progress --watch",
     "build": "webpack  --mode=production",
     "analyze": "webpack --analyze --progress --config webpack.dev.js",
     "svgo": "svgo -f ./src/assets/images -o ./src/assets/images/svg",
