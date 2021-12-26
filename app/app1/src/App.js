@@ -12,6 +12,7 @@ const App = () => {
       }}>
         <h1>App1</h1>
       </div>
+      啊啊啊
       <Suspense fallback={"loading..."}>
         <RemoteApp/>
       </Suspense>
