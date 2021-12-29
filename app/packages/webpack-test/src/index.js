@@ -8,10 +8,10 @@ import lazy from './assets/css/index.lazy.css'
 console.log(lazy)
 
 import './assets/css/index.link.css'
-import gifa from  './assets/images/a.gif?width=300&height=300'
-import imgb from  './assets/images/b.jpg'
-import Sketchpad from  './assets/images/Sketchpad.png'
-import kani from  './assets/images/kani.svg'
+import gifa from './assets/images/a.gif?width=300&height=300'
+import imgb from './assets/images/b.jpg'
+import Sketchpad from './assets/images/Sketchpad.png'
+import kani from './assets/images/kani.svg'
 
 console.log([gifa, imgb, Sketchpad, kani])
 

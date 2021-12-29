@@ -1,0 +1,10 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
