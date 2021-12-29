@@ -1,5 +1,5 @@
 {
-  "name": "webpack-init",
+  "name": "webpack-test",
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.js",
@@ -8,8 +8,7 @@
     "dev:config": "webpack --config webpack.dev.js --progress --watch",
     "build": "webpack  --mode=production",
     "analyze": "webpack --analyze --progress --config webpack.dev.js",
-    "svgo": "svgo -f ./src/assets/images -o ./src/assets/images/svg",
-    "server": "nodemon ./server"
+    "svgo": "svgo -f app/packages/webpack-test/src/assets/images -o ./src/assets/images/svg"
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +19,6 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.5",
     "mini-svg-data-uri": "^1.4.3",
-    "nodemon": "^2.0.15",
     "posthtml": "^0.16.5",
     "raw-loader": "^4.0.2",
     "style-loader": "^3.3.1",
