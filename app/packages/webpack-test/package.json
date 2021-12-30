@@ -31,7 +31,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.21",
-    "posthtml-custom-elements": "^1.1.2",
-    "tapable": "^2.2.1"
+    "posthtml-custom-elements": "^1.1.2"
   }
 }

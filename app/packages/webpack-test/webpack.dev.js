@@ -24,8 +24,16 @@ module.exports = [
     plugins: [
       new ConsoleLogWebpackPlugin(),
       new HtmlWebpackPlugin({
-        title: '多页面测试',
-        // chunks:['viewport']
+        title: 'index',
+        template: "./public/index.html",
+        filename: 'index.html',
+        chunks: ['index']
+      }),
+      new HtmlWebpackPlugin({
+        title: 'viewport',
+        template: "./public/index.html",
+        filename: 'viewport.html',
+        chunks: ['viewport']
       })
     ],
     module: {
@@ -53,13 +61,5 @@ module.exports = [
         }
       ]
     }
-  },
-  // {
-  //   name: 'test2',
-  //   mode: 'production',
-  //   entry: getPages(['index']),
-  //   output: {
-  //     path: path.resolve(__dirname, './multi-page-2'),
-  //   },
-  // }
+  }
 ]

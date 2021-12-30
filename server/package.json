@@ -5,6 +5,7 @@
     "server": "nodemon index.js"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "tapable": "^2.2.1"
   }
 }
