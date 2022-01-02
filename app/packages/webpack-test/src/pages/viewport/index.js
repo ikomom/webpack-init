@@ -1,5 +1,5 @@
-import {log} from "../../utils/utils";
+import {log} from "@utils/utils";
 
 export const name = 'viewport'
 
-log(name)
+log({name})
