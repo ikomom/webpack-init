@@ -9,10 +9,13 @@ const common =  {
   mode: 'development',
   devtool: 'source-map',
   resolve: {
+    mainFiles: ['index'],
+    extensions: ['...', '.jsx'],
     alias: {
       '@assets': path.resolve(__dirname, 'src/assets/'),
       '@utils': path.resolve(__dirname, 'src/utils/'),
       '@pages': path.resolve(__dirname, 'src/pages/'),
+      '@components': path.resolve(__dirname, 'src/components/'),
     }
   },
   plugins: [
@@ -33,6 +36,18 @@ const common =  {
   ],
   module: {
     rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.jsx?$/,
+        loader: "babel-loader",
+        exclude: /node_modules/,
+        options: {
+          presets: ["@babel/preset-react"],
+        },
+      },
       {
         test: /\.png/,
         type: 'asset/resource',
@@ -99,15 +114,23 @@ module.exports = [
     output: {
       clean: true,
       publicPath: './',
-      filename: '[name].bundle.js',
+      filename: '[name].[contenthash].js',
       path: path.resolve(__dirname, './multi-page-1'),
       // assetModuleFilename: 'images/[name][ext][query]'
     },
     optimization: {
+      // moduleIds: 'deterministic',
       // chunkIds: 'named',
       runtimeChunk: 'single',
       splitChunks: {
-        chunks: 'all',
+        // chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          }
+        }
       }
     }
   }
