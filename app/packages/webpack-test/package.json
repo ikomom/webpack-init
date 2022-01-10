@@ -5,10 +5,13 @@
   "main": "./src/index.js",
   "scripts": {
     "dev": "webpack --mode=development",
+    "dev:build": "webpack --mode=production",
     "dev:config": "webpack --config webpack.dev.js --progress --watch",
-    "build": "webpack  --mode=production",
-    "analyze": "webpack --analyze --progress --config webpack.dev.js",
-    "svgo": "svgo -f app/packages/webpack-test/src/assets/images -o ./src/assets/images/svg"
+    "dev:config:build": "webpack --mode=production --config webpack.dev.js --config-name test2 -o multi-page-build",
+    "dev:config:analyze": "webpack --analyze --progress --config webpack.dev.js",
+    "svgo": "svgo -f app/packages/webpack-test/src/assets/images -o ./src/assets/images/svg",
+    "help": "webpack --help",
+    "status": "webpack --config webpack.dev.js --json > stats.json"
   },
   "author": "",
   "license": "ISC",
@@ -23,14 +26,17 @@
     "raw-loader": "^4.0.2",
     "style-loader": "^3.3.1",
     "svgo": "^2.8.0",
+    "nodemon": "^2.0.15",
     "url-loader": "^4.1.1",
     "webpack": "^5.65.0",
     "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-chain": "^6.5.1",
     "webpack-cli": "^4.9.1",
+    "webpack-manifest-plugin": "^4.0.2",
     "webpack-subresource-integrity": "^5.0.0"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "posthtml-custom-elements": "^1.1.2"
   }
 }
