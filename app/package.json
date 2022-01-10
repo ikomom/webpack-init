@@ -2,9 +2,12 @@
   "name": "module-federation",
   "version": "1.0.0",
   "private": "true",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+      "nohoist": ["**/sass", "webpack-test/*"]
+  },
   "scripts": {
     "start": "lerna run --parallel start",
     "build": "lerna run build",
