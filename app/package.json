@@ -2,9 +2,14 @@
   "name": "module-federation",
   "version": "1.0.0",
   "private": "true",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "app1/@*/**"
+    ]
+  },
   "scripts": {
     "start": "lerna run --parallel start",
     "build": "lerna run build",
@@ -17,6 +22,21 @@
     "clean": "lerna clean"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-react": "^7.13.13",
+    "@typescript-eslint/parser": "^4.15.1",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "external-remotes-plugin": "^1.0.0",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^2.4.5",
+    "mini-svg-data-uri": "^1.4.3",
+    "webpack": "^5.38.1",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^4.0.0",
+    "webpack-manifest-plugin": "^4.0.2",
+    "webpack-subresource-integrity": "^5.0.0",
     "lerna": "^4.0.0"
   }
 }
