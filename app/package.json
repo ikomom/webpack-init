@@ -6,9 +6,7 @@
     "packages": [
       "packages/*"
     ],
-    "nohoist": [
-      "app1/@*/**"
-    ]
+      "nohoist": ["**/sass", "webpack-test/*"]
   },
   "scripts": {
     "start": "lerna run --parallel start",
