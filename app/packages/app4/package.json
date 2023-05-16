@@ -1,0 +1,12 @@
+{
+  "name": "app4",
+  "version": "1.0.1",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  }
+}
